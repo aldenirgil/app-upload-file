@@ -75,6 +75,6 @@
   <p>Verifique <a href="http://localhost:8080/">localhost</a> em seu navegador e voilá</p>
   
 </section>
-
 <hr>
+<br>
 
