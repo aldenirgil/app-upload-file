@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/upload-file', [PedidosController::class, 'index']);
-Route::post('/upload-file', [PedidosController::class, 'fileUpload'])->name('fileUpload');
+Route::get('/', [PedidosController::class, 'index']);
+Route::post('/carregar-arquivos', [PedidosController::class, 'fileUpload'])->name('fileUpload');
+
