@@ -55,73 +55,26 @@
   </pre>
 </section>
 <hr>
+<br>
 
 <section id="clone" style="padding: 10px;">
   <h2>Clone o projeto</h2>
-  <p>Uma maneira simples e rápida de obter esse ambiente é clonar meu projeto em um diretório, abrir seu terminal, navegar até o diretório clonado do projeto e escrever alguns comandos:</p>
+  <p>Execute o git bash</p>
+  <p>Navegue até o seu diretório raiz, onde ficara o projeto e execute o comando abaixo:</p>
+  ```
+    git clone git@github.com:aldenirgil/app-upload-file.git
+  ```
+
+  <p>Aguarde a conclusão do git, abra a pasta  e na sequencia entre com os comandos:</p>
   
   ```
     docker-compose build
     docker-compose up -d
   ```
 
-  <p>Verifique <a href="http://localhost:80">localhost</a> em seu navegador e voilá</p>
-  <h3>Portas usadas no projeto:</h3>
+  <p>Verifique <a href="http://localhost:8080/">localhost</a> em seu navegador e voilá</p>
+  
+</section>
 
-  ```
-    http -> 80
-    https -> 443
-    php -> 9000
-    mysql -> 3306    
-  ```
-  </section>
 <hr>
 
-<section id="dic-tree" style="padding: 10px;">
-  <h2>Árvore de diretórios</h2>
-  <p>Antes de começarmos a configurar nosso ambiente, crie sua arvore de diretório seguindo exatamente a mesma estrutura abaixo.</p>
-  <p><strong>OBSERVAÇÃO:</strong> considerar "workspace" seu diretorio de trabalho. O importante é que dentro do seu diretório de trabalho, você siga a estrutura abaixo".
-  <h3>Minha árvore de projetos:</h3>
-  <pre>
-    \- --workspace<br>
-        +---file-upload-app<br>
-          | docker-compose.yml<br>
-          | Dockerfile<br>
-          +---docker<br>
-          | +---nginx<br>
-          |
-  </pre>
-</section>
-<hr>
-
-
-
-<section id="test-db" style="padding: 10px;">
-  <h2>Executando e testando nosso projeto.</h2>
-  <p>Com tudo configurado, vamos dar vida ao nosso ambiente.</p>
-  <p>No diretório <code>/environmentProject/</code>, construa todas as imagens com:</p>
-  <pré>
-    compilação docker-compose
-  </pre>
-  <p>Quando terminar, vamos executar todos os contêineres com:</p>
-  <pré>
-    docker-composer up -d
-  </pre>
-  <p>Entre no seu <a href="https://localhost">localhost</a> e voilá!</p>
-  <p>Com tudo funcionando, você pode testar sua conexão MySql navegando para <a href="http://localhost/index.php">localhost/index.php</a>. Se tudo estiver bem, você receberá uma mensagem de sucesso.</p>
-  <p>Para o teste laravel, você precisará editar <code>/example-app/.env</code> e definir sua conexão com o mysql. Exemplo:</p>
-  <pré>
-    DB_CONNECTION=mysql
-    DB_HOST=db
-    DB_PORT=3306
-    DB_DATABASE=test_db
-    DB_USERNAME=deusuario
-    DB_PASSWORD=devpass
-  </pre>
-  <p>Salvar e executar os seguintes comandos:</p>
-  <pré>
-    docker exec (container_id) composer dump-autoload
-    docker exec (container_id) php artesão migrar
-  </pre>
-  <p>Se você não receber nenhuma mensagem de erro, sua conexão está correta e você está pronto para codificar.</p>
-</section>
