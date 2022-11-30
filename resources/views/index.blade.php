@@ -78,59 +78,56 @@
                 </div>
             </div>
 
-            @if (!empty($dados['pedidos']))
-
-                <!-- Table Start -->
-                <div class="container pt-4 px-0">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="bg-light rounded p-4">
-                                <h6 class="mb-4">Dados Cadastrados</h6>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
+            <!-- Table Start -->
+            <div class="container pt-4 px-0">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="bg-light rounded p-4">
+                            <h6 class="mb-4">Dados Cadastrados</h6>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Comprador</th>
+                                            <th scope="col">Descrição</th>
+                                            <th scope="col">Preço Unitário</th>
+                                            <th scope="col">Quantidade</th>
+                                            <th scope="col">Endereço</th>
+                                            <th scope="col">Fornecedor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="6" class="h-4"></td>
+                                        </tr>
+                                        @foreach ($dados['pedidos'] as $pedido)
                                             <tr>
-                                                <th scope="col">Comprador</th>
-                                                <th scope="col">Descrição</th>
-                                                <th scope="col">Preço Unitário</th>
-                                                <th scope="col">Quantidade</th>
-                                                <th scope="col">Endereço</th>
-                                                <th scope="col">Fornecedor</th>
+                                                <td>{{ $pedido->comprador }}</td>
+                                                <td>{{ $pedido->descricao }}</td>
+                                                <td>{{ number_format($pedido->preco, 2, '.', '') }}</td>
+                                                <td>{{ $pedido->quantidade }}</td>
+                                                <td>{{ $pedido->endereco }}</td>
+                                                <td>{{ $pedido->fornecedor }}</td>
                                             </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td colspan="6" class="h-4"></td>
-                                            </tr>
-                                            @foreach ($dados['pedidos'] as $pedido)
-                                                <tr>
-                                                    <td>{{ $pedido->comprador }}</td>
-                                                    <td>{{ $pedido->descricao }}</td>
-                                                    <td>{{ number_format($pedido->preco, 2, '.', '') }}</td>
-                                                    <td>{{ $pedido->quantidade }}</td>
-                                                    <td>{{ $pedido->endereco }}</td>
-                                                    <td>{{ $pedido->fornecedor }}</td>
-                                                </tr>
-                                            @endforeach
-                                            <tr>
-                                                <td colspan="6" class="h-4"></td>
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th colspan="6" class="text-end table-dark">
-                                                    Valor total recebido: R$ {{ number_format($dados['total'][0]->total, 2, '.', '') }}
-                                                </th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
+                                        @endforeach
+                                        <tr>
+                                            <td colspan="6" class="h-4"></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th colspan="6" class="text-end table-dark">
+                                                Valor total recebido: R$ {{ number_format($dados['total'][0]->total, 2, '.', '') }}
+                                            </th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Table End -->
-            @endif
+            </div>
+            <!-- Table End -->
 
 
             <!-- Footer Start -->
