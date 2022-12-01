@@ -98,13 +98,9 @@
     ```
 
   <p>Acesse a imagem do sistema através do comando: </p>
- 
-
-    ```
+     ```
         docker exec -it <nome-da-imagem> /bin/bash
     ```
-  
-  
   <p>Na sequencia digite, </p>
  
 
