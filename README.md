@@ -61,6 +61,7 @@
   <h2>Clone o projeto</h2>
   <p>Execute o git bash</p>
   <p>Navegue até o seu diretório raiz, onde ficara o projeto e execute o comando abaixo:</p>
+    
   ```
     git clone git@github.com:aldenirgil/app-upload-file.git
   ```
