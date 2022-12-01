@@ -104,11 +104,13 @@
   ```
   
   <p>Na sequencia digite, </p>
+
   ```
     composer update
   ```
-    <p>Para recriar a pasta vendor e o autoload e pronto. O sistema está pronto para uso.<br>
-    Verifique <a href="http://localhost:8080/">localhost</a> em seu navegador.</p> 
+  
+  <p>Para recriar a pasta vendor e o autoload e pronto. O sistema está pronto para uso.<br>
+  Verifique <a href="http://localhost:8080/">localhost</a> em seu navegador.</p> 
   
 </section>
 <hr>
