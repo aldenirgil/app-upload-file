@@ -66,14 +66,55 @@
     git clone git@github.com:aldenirgil/app-upload-file.git
   ```
 
-  <p>Aguarde a conclusão do git, abra a pasta  e na sequencia entre com os comandos:</p>
+  <p>Aguarde a conclusão do git, através do terminal, acesse a a pasta do projeto e dentro dela execute os comandos:</p>
   
   ```
     docker-compose build
     docker-compose up -d
   ```
 
-  <p>Verifique <a href="http://localhost:8080/">localhost</a> em seu navegador e voilá</p>
+  <p>Aguarde o termino do processo, e crie a pasta <pre>.env</pre></p>
+  <p>Pelo terminal, use o comomando: </p>
+  
+  ```
+    cp .env.example .env
+  ```
+  
+  <p>Para esse sistema, abra o <pre>.env</pre> e edite o as linhas refetes ao banco de dados. coloque:</p>
+  
+  ```
+    DB_CONNECTION=sqlite
+    # DB_HOST=127.0.0.1
+    # DB_PORT=3306
+    # DB_DATABASE=laravel
+    # DB_USERNAME=root
+    # DB_PASSWORD=
+  ```
+  
+  <p>Salve e retorne ao terminal wsl. Acesse a imagem do sistema.</p>
+  
+    ```
+        docker-compose restart
+    ```
+
+  <p>Acesse a imagem do sistema através do comando: </p>
+ 
+
+    ```
+        docker exec -it <nome-da-imagem> /bin/bash
+    ```
+  
+  
+  <p>Na sequencia digite </p>
+ 
+
+    ```
+        composer update
+    ```
+    
+    <p>Para recriar a pasta vendor e o autoload e pronto. O sistema está pronto para uso.<br>
+    Verifique <a href="http://localhost:8080/">localhost</a> em seu navegador</p>
+  
   
 </section>
 <hr>
